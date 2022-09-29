@@ -342,8 +342,19 @@
           <div class="footer-item">
             <p class="footer-title">Підпишіться на розсилку</p>
             <form class="subscribe-form">
-              <input type="text" />
-              <button type="button">btn</button>
+              <input
+                type="text"
+                name="subscribe"
+                id="subscribe"
+                class="subscribe-area"
+                placeholder="E-mail"
+              />
+              <button type="button" for="subscibe" class="hero-button">
+                Підписатися
+                <svg class="arrow" width="24" height="24">
+                  <use href="./images/icons.svg#white-arrow"></use>
+                </svg>
+              </button>
             </form>
           </div>
         </div>
@@ -355,15 +366,42 @@
           <button type="button" class="button-cross" data-modal-close></button>
         </div>
         <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form>
-          <label for="name">Ім'я</label>
-          <input type="text" name="name" id="name" />
+        <form class="form-modal">
+          <div class="label-field">
+            <label for="name" class="label-title">Ім'я</label>
+            <input type="text" name="name" id="name" class="label-area" />
+          </div>
 
-          <label for="tel">Телефон</label>
-          <input type="text" name="tel" id="tel" />
+          <div class="label-field">
+            <label for="tel" class="label-title">Телефон</label>
+            <input type="text" name="tel" id="tel" class="label-area" />
+          </div>
 
-          <label for="post">Пошта</label>
-          <input type="text" name="post" id="post" />
+          <div class="label-field">
+            <label for="post" class="label-title">Пошта</label>
+            <input type="text" name="post" id="post" class="label-area" />
+          </div>
+
+          <div class="label-field">
+            <label for="comment" class="label-title">Коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введіть текст"
+              class="label-area textarea"
+            ></textarea>
+          </div>
+
+          <div class="label-field checkbox">
+            <input type="checkbox" name="agreement" id="agreement" />
+            <label for="agreement"
+              >Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label
+            >
+          </div>
+
+          <div class="form-button">
+            <button type="submit" class="hero-button">Відправити</button>
+          </div>
         </form>
       </div>
     </div>
