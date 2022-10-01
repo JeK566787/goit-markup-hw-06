@@ -362,24 +362,31 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="cross-container">
-          <button type="button" class="button-cross" data-modal-close></button>
-        </div>
+        <button type="button" class="button-cross" data-modal-close></button>
         <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="form-modal">
+        <form name="form-modal" class="form-modal">
           <div class="label-field">
             <label for="name" class="label-title">Ім'я</label>
-            <input type="text" name="name" id="name" class="label-area" />
+            <input type="text" name="name" id="name" class="label-input" />
+            <svg class="modal-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
           </div>
 
           <div class="label-field">
             <label for="tel" class="label-title">Телефон</label>
-            <input type="text" name="tel" id="tel" class="label-area" />
+            <input type="text" name="tel" id="tel" class="label-input" />
+            <svg class="modal-icon" width="13" height="13">
+              <use href="./images/icons.svg#icon-Vector-1"></use>
+            </svg>
           </div>
 
           <div class="label-field">
             <label for="post" class="label-title">Пошта</label>
-            <input type="text" name="post" id="post" class="label-area" />
+            <input type="text" name="post" id="post" class="label-input" />
+            <svg class="modal-icon" width="15" height="12">
+              <use href="./images/icons.svg#icon-Vector-2"></use>
+            </svg>
           </div>
 
           <div class="label-field">
@@ -388,16 +395,15 @@
               name="comment"
               id="comment"
               placeholder="Введіть текст"
-              class="label-area textarea"
+              class="label-input textarea"
             ></textarea>
           </div>
 
-          <div class="label-field checkbox">
-            <input type="checkbox" name="agreement" id="agreement" />
-            <label for="agreement"
-              >Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label
-            >
-          </div>
+          <label for="agreement" class="label-field checkbox-container">
+            <input type="checkbox" name="agreement" id="agreement" class="checkbox" />
+            <span class="checkbox-icon"></span>Погоджуюся з розсилкою та приймаю&nbsp;
+            <a href="#">Умови договору</a>
+          </label>
 
           <div class="form-button">
             <button type="submit" class="hero-button">Відправити</button>
